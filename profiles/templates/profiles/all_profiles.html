@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+All profiles
+{% endblock %}
+
+{% block content %}
+<h1>All profiles</h1>
+<ul>
+    {% for profile in profiles %}
+        {% if profile.user_image %}
+            <li><img style="width:20rem" src= "{{profile.user_image.url}}"></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
